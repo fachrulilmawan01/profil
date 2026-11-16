@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fachrul Ilmawan, S.Kom., M.Kom. | Project Manager & SAP SF Consultant</title>
-  <meta name="description" content="Profil Profesional & Portofolio Fachrul Ilmawan, S.Kom., M.Kom. - Project Manager & SAP SuccessFactors Consultant dengan pengalaman IT sejak 2015 (11+ tahun) dan memimpin 37+ proyek enterprise.">
+  <meta name="description" content="Profil & Portofolio Profesional Fachrul Ilmawan, S.Kom., M.Kom. - Project Manager & SAP SuccessFactors Consultant dengan pengalaman IT sejak 2015 (11+ tahun) dan memimpin 37+ proyek enterprise.">
   <meta name="author" content="Fachrul Ilmawan">
 
   <!-- Tailwind CSS CDN -->
@@ -21,13 +21,12 @@
               500: '#3b82f6',
               600: '#2563eb',
               700: '#1d4ed8',
-              800: '#1e40af',
-              900: '#1e3a8a',
             }
           },
           fontFamily: {
             sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
             display: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
           }
         }
       }
@@ -40,25 +39,25 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-ambient-light dark:bg-ambient-dark text-slate-800 dark:text-zinc-200 min-h-screen transition-colors duration-300 selection:bg-blue-600 selection:text-white">
+<body class="bg-modern-light dark:bg-modern-dark text-slate-800 dark:text-zinc-200 min-h-screen transition-colors duration-300 selection:bg-blue-600 selection:text-white pb-16">
 
-  <!-- Top Navigation Bar -->
-  <header class="fixed top-0 inset-x-0 z-50 header-glass">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <!-- Floating Navigation Bar -->
+  <header class="fixed top-4 inset-x-0 z-50 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto rounded-2xl floating-nav px-4 sm:px-6 h-16 flex items-center justify-between shadow-lg">
       
       <!-- Brand Logo / Monogram -->
       <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-sm tracking-wide shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-sm tracking-wide shadow-md shadow-blue-500/25 group-hover:scale-105 transition-transform">
           FI
         </div>
         <div class="flex flex-col">
-          <span class="text-base font-bold tracking-tight text-slate-900 dark:text-white font-display">Fachrul Ilmawan</span>
-          <span class="text-xs text-blue-600 dark:text-blue-400 font-medium">PM &amp; SAP SF Consultant</span>
+          <span class="text-sm font-bold tracking-tight text-slate-900 dark:text-white font-display">Fachrul Ilmawan</span>
+          <span class="text-[11px] text-blue-600 dark:text-blue-400 font-medium">PM &amp; SAP SF Consultant</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-zinc-300">
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-zinc-300">
         <a href="#tentang" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tentang</a>
         <a href="#keahlian" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Keahlian</a>
         <a href="#portofolio" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Portofolio</a>
@@ -68,28 +67,28 @@
       </nav>
 
       <!-- Action Utilities -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5">
         <!-- Theme Toggle -->
-        <button id="theme-toggle" type="button" aria-label="Ganti Tema" class="w-10 h-10 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] flex items-center justify-center transition-all">
+        <button id="theme-toggle" type="button" aria-label="Ganti Tema" class="w-9 h-9 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] flex items-center justify-center transition-all">
           <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
           <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-slate-700"></i>
         </button>
 
         <!-- Print CV Button -->
-        <button id="btn-print" onclick="window.print()" type="button" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-200 dark:border-white/10 text-slate-700 dark:text-zinc-200 hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all">
+        <button id="btn-print" onclick="window.print()" type="button" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-white/10 text-slate-700 dark:text-zinc-200 hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all">
           <i data-lucide="printer" class="w-3.5 h-3.5"></i>
           <span>Cetak CV</span>
         </button>
 
         <!-- Direct Contact WhatsApp -->
-        <a href="https://wa.me/6285263416474?text=Halo%20Fachrul%20Ilmawan,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek/kolaborasi" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/35">
+        <a href="https://wa.me/6285263416474?text=Halo%20Fachrul%20Ilmawan,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek/kolaborasi" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-500/25 transition-all">
           <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
           <span>Hubungi</span>
         </a>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" type="button" aria-label="Buka Menu" class="md:hidden w-10 h-10 rounded-xl border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-zinc-300">
-          <i data-lucide="menu" class="w-5 h-5"></i>
+        <button id="mobile-menu-btn" type="button" aria-label="Buka Menu" class="md:hidden w-9 h-9 rounded-xl border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-zinc-300">
+          <i data-lucide="menu" class="w-4 h-4"></i>
         </button>
       </div>
 
@@ -129,750 +128,645 @@
     </div>
   </div>
 
-  <main class="pt-24">
+  <main class="pt-28 max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
 
-    <!-- HERO SECTION (High Contrast & Ambient Glow) -->
-    <section id="hero" class="relative pt-12 pb-20 md:py-28 overflow-hidden">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Status Pill -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 mb-8 backdrop-blur-md">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Tersedia untuk Tata Kelola Proyek &amp; Konsultansi Enterprise</span>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div class="lg:col-span-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] font-display">
-              Fachrul Ilmawan<span class="text-blue-600 dark:text-blue-400">, M.Kom.</span>
-            </h1>
-            
-            <p class="mt-4 text-xl sm:text-2xl font-semibold text-blue-600 dark:text-blue-400 font-display">
-              Project Manager &amp; SAP SuccessFactors Consultant
-            </p>
-
-            <p class="mt-6 text-base sm:text-lg text-slate-600 dark:text-zinc-300 leading-relaxed max-w-2xl">
-              Memadukan visi strategis bisnis dengan eksekusi rekayasa teknologi enterprise. Lebih dari 11 tahun pengalaman profesional TI (sejak 2015), sukses memimpin dan mengawal lebih dari 37 proyek implementasi sistem korporasi, integrasi ERP SAP, serta tata kelola mutu (QA/UAT) berskala nasional.
-            </p>
-
-            <!-- Metadata info line -->
-            <div class="mt-6 flex flex-wrap items-center gap-y-2 gap-x-5 text-sm text-slate-600 dark:text-zinc-300 font-medium">
-              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/[0.08]">
-                <i data-lucide="map-pin" class="w-4 h-4 text-rose-500"></i>
-                Jakarta, Indonesia
-              </span>
-              <a href="tel:085263416474" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/[0.08] hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                <i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i>
-                085263416474
-              </a>
-              <a href="mailto:fachrul.ilmawan@gmail.com" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/[0.08] hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                <i data-lucide="mail" class="w-4 h-4 text-blue-500"></i>
-                fachrul.ilmawan@gmail.com
-              </a>
-            </div>
-
-            <!-- Action Buttons -->
-            <div id="quick-actions" class="mt-8 flex flex-wrap items-center gap-4">
-              <a href="https://wa.me/6285263416474?text=Halo%20Fachrul%20Ilmawan,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek/kolaborasi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold shadow-lg shadow-blue-500/25 transition-all hover:-translate-y-0.5">
-                <i data-lucide="message-square" class="w-4 h-4"></i>
-                <span>Hubungi via WhatsApp</span>
-              </a>
-              <a href="#portofolio" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl glass-card text-slate-800 dark:text-zinc-100 text-sm font-semibold hover:border-blue-500/40 transition-all hover:-translate-y-0.5">
-                <i data-lucide="folder-kanban" class="w-4 h-4 text-blue-500"></i>
-                <span>Lihat Portofolio</span>
-              </a>
-              <button type="button" onclick="window.print()" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-zinc-300 text-sm font-medium hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all">
-                <i data-lucide="download" class="w-4 h-4"></i>
-                <span>Cetak / PDF CV</span>
-              </button>
-            </div>
-
+    <!-- BENTO HERO SECTION -->
+    <section id="hero" class="grid grid-cols-1 md:grid-cols-12 gap-5">
+      
+      <!-- Main Intro Bento Card (Col 8) -->
+      <div class="bento-card p-8 sm:p-10 rounded-3xl md:col-span-8 flex flex-col justify-between">
+        <div>
+          <!-- Status Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 mb-6 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Tersedia untuk Tata Kelola Proyek &amp; Konsultansi Enterprise</span>
           </div>
 
-          <!-- Highlight Metric Stats (Refined & Luminous) -->
-          <div class="lg:col-span-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
-            <div class="glass-card p-5 rounded-2xl">
-              <div class="text-3xl font-extrabold text-slate-900 dark:text-white font-display">11+</div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-zinc-200 mt-1">Tahun Pengalaman IT</div>
-              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Rekam jejak profesional sejak 2015</div>
-            </div>
-            <div class="glass-card p-5 rounded-2xl">
-              <div class="text-3xl font-extrabold text-blue-600 dark:text-blue-400 font-display">37+</div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-zinc-200 mt-1">Total Proyek Enterprise</div>
-              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Sektor BUMN &amp; korporasi swasta</div>
-            </div>
-            <div class="glass-card p-5 rounded-2xl">
-              <div class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400 font-display">M.Kom</div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-zinc-200 mt-1">Magister Teknik Informatika</div>
-              <div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Universitas Putra Indonesia 'YPTK'</div>
-            </div>
-          </div>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] font-display">
+            Fachrul Ilmawan<span class="text-blue-600 dark:text-blue-400">, M.Kom.</span>
+          </h1>
 
-        </div>
+          <p class="mt-3 text-lg sm:text-xl font-semibold text-blue-600 dark:text-blue-400 font-display">
+            Project Manager &amp; SAP SuccessFactors Consultant
+          </p>
 
-      </div>
-    </section>
-
-    <!-- SECTION: TENTANG SAYA -->
-    <section id="tentang" class="py-20 section-border border-t">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-xl mb-12">
-          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Ringkasan Eksekutif</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1.5 font-display">
-            Tentang Saya
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
-          <div class="lg:col-span-7 space-y-5 text-base text-slate-600 dark:text-zinc-300 leading-relaxed">
-            <p>
-              Saya adalah seorang <strong class="text-slate-900 dark:text-white font-semibold">Project Manager &amp; SAP IT Consultant profesional</strong> dengan pengalaman lebih dari 11 tahun dalam memimpin seluruh siklus hidup proyek TI berskala besar (*enterprise*).
-            </p>
-            <p>
-              Kekuatan utama saya terletak pada kemampuan menjembatani visi strategis manajemen dengan eksekusi teknis lapangan. Saya terbiasa mengelola pemangku kepentingan tingkat eksekutif (*C-level/VP*), memitigasi risiko kompleks, serta menjaga standar kepatuhan dan mutu sistem dari inisiasi, perancangan blueprint, hingga tahap *Go-Live* dan *Hypercare Support*.
-            </p>
-            <p>
-              Dengan latar belakang kuat sebagai *Functional Consultant SAP SuccessFactors* (modul PMGM &amp; SCDP), *SAP SD*, serta pengembang perangkat lunak (*Software Developer ABAP &amp; PHP*), saya memiliki pemahaman teknis mendalam terhadap arsitektur integrasi ERP, modul Human Capital Management, serta aplikasi kustom operasional perusahaan.
-            </p>
-          </div>
-
-          <!-- 4 Core Pillars of Value -->
-          <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="glass-card p-5 rounded-2xl">
-              <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-3">
-                <i data-lucide="shield-check" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white font-display">Tata Kelola E2E</h3>
-              <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1.5 leading-relaxed">
-                Pengawasan komprehensif jadwal linimasa, anggaran, ruang lingkup, dan mitigasi risiko.
-              </p>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl">
-              <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-3">
-                <i data-lucide="users" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white font-display">Stakeholder Mgmt</h3>
-              <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1.5 leading-relaxed">
-                Komunikasi diplomatik dan pelaporan berjenjang antara eksekutif, tim teknis, dan vendor.
-              </p>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl">
-              <div class="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-3">
-                <i data-lucide="layers" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white font-display">Arsitektur ERP</h3>
-              <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1.5 leading-relaxed">
-                Integrasi mulus antara sistem SAP ERP, SuccessFactors, dan sistem operasional bisnis.
-              </p>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl">
-              <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
-                <i data-lucide="check-circle" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white font-display">Jaminan Mutu (QA)</h3>
-              <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1.5 leading-relaxed">
-                Pengawasan ketat User Acceptance Testing (UAT), migrasi data, dan kestabilan Go-Live.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: KEAHLIAN UTAMA -->
-    <section id="keahlian" class="py-20 section-border border-t">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-xl mb-12">
-          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Kompetensi Inti</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1.5 font-display">
-            Keahlian Utama
-          </h2>
-          <p class="text-sm text-slate-500 dark:text-zinc-400 mt-2">
-            Perpaduan harmonis antara tata kelola proyek tingkat lanjut, solusi enterprise, dan rekayasa piranti lunak.
+          <p class="mt-4 text-sm sm:text-base text-slate-600 dark:text-zinc-300 leading-relaxed max-w-xl">
+            Memadukan visi strategis bisnis dengan eksekusi rekayasa teknologi enterprise. Lebih dari 11 tahun pengalaman profesional TI (sejak 2015), memimpin dan mengawal lebih dari 37 proyek implementasi sistem korporasi, integrasi ERP SAP, serta tata kelola mutu (QA/UAT) berskala nasional.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- Domain 1: Manajemen Proyek TI -->
-          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-            <div>
-              <div class="w-11 h-11 rounded-xl bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-5">
-                <i data-lucide="briefcase" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 font-display">Tata Kelola Proyek TI</h3>
-              <ul class="space-y-2.5 text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                <li class="flex items-center gap-2">• End-to-End Project Lifecycle</li>
-                <li class="flex items-center gap-2">• Perencanaan Linimasa &amp; WBS</li>
-                <li class="flex items-center gap-2">• Pengelolaan Anggaran &amp; Resource</li>
-                <li class="flex items-center gap-2">• Mitigasi &amp; Manajemen Risiko</li>
-                <li class="flex items-center gap-2">• Tata Kelola Sistem Enterprise</li>
-              </ul>
-            </div>
-            <span class="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 text-xs font-semibold text-blue-600 dark:text-blue-400">Project Governance</span>
+        <div class="mt-8 pt-6 border-t border-slate-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-4">
+          <!-- Quick Metadata -->
+          <div class="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-zinc-300 font-medium">
+            <span class="inline-flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-rose-500"></i>
+              Jakarta, ID
+            </span>
+            <span class="text-slate-300 dark:text-zinc-700">•</span>
+            <a href="tel:085263416474" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              085263416474
+            </a>
+            <span class="text-slate-300 dark:text-zinc-700">•</span>
+            <a href="mailto:fachrul.ilmawan@gmail.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              fachrul.ilmawan@gmail.com
+            </a>
           </div>
 
-          <!-- Domain 2: Solusi Enterprise & SAP -->
-          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-            <div>
-              <div class="w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-5">
-                <i data-lucide="server" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 font-display">Solusi Enterprise &amp; SAP</h3>
-              <ul class="space-y-2.5 text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                <li class="flex items-center gap-2">• SAP SuccessFactors (PMGM &amp; SCDP)</li>
-                <li class="flex items-center gap-2">• Facility Management (PIGEON)</li>
-                <li class="flex items-center gap-2">• E-SHE &amp; Legal Compliance</li>
-                <li class="flex items-center gap-2">• Integrasi SAP S/4HANA &amp; ERP</li>
-                <li class="flex items-center gap-2">• Single Sign-On (SSO)</li>
-              </ul>
-            </div>
-            <span class="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 text-xs font-semibold text-indigo-600 dark:text-indigo-400">Enterprise Solutions</span>
+          <!-- Quick Action Buttons -->
+          <div id="quick-actions" class="flex items-center gap-3">
+            <a href="https://wa.me/6285263416474?text=Halo%20Fachrul%20Ilmawan,%20saya%20tertarik%20untuk%20berdiskusi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-blue-500/25 transition-all hover:-translate-y-0.5">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              <span>Hubungi</span>
+            </a>
+            <button type="button" onclick="window.print()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-white/10 text-slate-700 dark:text-zinc-200 text-xs sm:text-sm font-medium hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Cetak CV</span>
+            </button>
           </div>
+        </div>
+      </div>
 
-          <!-- Domain 3: QA & Implementasi -->
-          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-            <div>
-              <div class="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-5">
-                <i data-lucide="check-square" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 font-display">QA, UAT &amp; Cutover</h3>
-              <ul class="space-y-2.5 text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                <li class="flex items-center gap-2">• User Acceptance Testing (UAT)</li>
-                <li class="flex items-center gap-2">• Quality Assurance (QA) Standards</li>
-                <li class="flex items-center gap-2">• Deployment &amp; Cutover Plan</li>
-                <li class="flex items-center gap-2">• Migrasi Data &amp; Data Cleansing</li>
-                <li class="flex items-center gap-2">• Go-Live &amp; Post Hypercare</li>
-              </ul>
-            </div>
-            <span class="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 text-xs font-semibold text-emerald-600 dark:text-emerald-400">Quality Assurance</span>
-          </div>
-
-          <!-- Domain 4: Rekayasa Teknis & Kolaborasi -->
-          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-            <div>
-              <div class="w-11 h-11 rounded-xl bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-5">
-                <i data-lucide="code-2" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 font-display">Rekayasa &amp; Kolaborasi</h3>
-              <ul class="space-y-2.5 text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                <li class="flex items-center gap-2">• Manajemen Stakeholder Eksekutif</li>
-                <li class="flex items-center gap-2">• Koordinasi Klien &amp; Vendor BUMN</li>
-                <li class="flex items-center gap-2">• Negosiasi Scope &amp; Change Request</li>
-                <li class="flex items-center gap-2">• Pemrograman ABAP &amp; PHP</li>
-                <li class="flex items-center gap-2">• System Analysis &amp; Database Design</li>
-              </ul>
-            </div>
-            <span class="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 text-xs font-semibold text-sky-600 dark:text-sky-400">Technical Foundation</span>
-          </div>
-
+      <!-- Key Metrics Bento Card (Col 4) -->
+      <div class="bento-card p-6 sm:p-8 rounded-3xl md:col-span-4 flex flex-col justify-between gap-5">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Ikhtisar Rekam Jejak</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display mt-1">Metrik Kunci</h3>
         </div>
 
+        <div class="space-y-4">
+          <div class="p-4 rounded-2xl modern-badge">
+            <div class="text-3xl font-extrabold text-slate-900 dark:text-white font-display">11+</div>
+            <div class="text-xs font-semibold text-slate-800 dark:text-zinc-200 mt-1">Tahun Pengalaman TI</div>
+            <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Praktik profesional sejak 2015</div>
+          </div>
+
+          <div class="p-4 rounded-2xl modern-badge">
+            <div class="text-3xl font-extrabold text-blue-600 dark:text-blue-400 font-display">37+</div>
+            <div class="text-xs font-semibold text-slate-800 dark:text-zinc-200 mt-1">Total Proyek Enterprise</div>
+            <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">Sektor BUMN &amp; korporasi swasta</div>
+          </div>
+
+          <div class="p-4 rounded-2xl modern-badge">
+            <div class="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400 font-display">M.Kom</div>
+            <div class="text-xs font-semibold text-slate-800 dark:text-zinc-200 mt-1">Magister Teknik Informatika</div>
+            <div class="text-[11px] text-slate-500 dark:text-zinc-400 mt-0.5">UPI 'YPTK' (2024–2026)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Specialty 1: SAP & ERP (Col 4) -->
+      <div class="bento-card p-6 rounded-3xl md:col-span-4 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4">
+            <i data-lucide="server" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white font-display mb-2">Solusi Enterprise SAP</h3>
+          <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed mb-4">
+            Keahlian implementasi modul SAP SuccessFactors (PMGM &amp; SCDP), Report Center, integrasi SSO, modul SAP SD, dan integrasi SAP S/4HANA.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-white/10 text-[11px] text-blue-600 dark:text-blue-400 font-medium">
+          <span>SuccessFactors</span> • <span>S/4HANA</span> • <span>SSO</span>
+        </div>
+      </div>
+
+      <!-- Core Specialty 2: Project Governance (Col 4) -->
+      <div class="bento-card p-6 rounded-3xl md:col-span-4 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4">
+            <i data-lucide="briefcase" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white font-display mb-2">Tata Kelola Proyek TI</h3>
+          <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed mb-4">
+            Menguasai siklus proyek E2E, perencanaan linimasa (WBS), manajemen anggaran, mitigasi risiko terukur, dan pelaporan eksekutif berjenjang.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-white/10 text-[11px] text-indigo-600 dark:text-indigo-400 font-medium">
+          <span>E2E Lifecycle</span> • <span>WBS</span> • <span>Risk Matrix</span>
+        </div>
+      </div>
+
+      <!-- Core Specialty 3: QA & Cutover (Col 4) -->
+      <div class="bento-card p-6 rounded-3xl md:col-span-4 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+            <i data-lucide="check-square" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white font-display mb-2">Penjaminan Mutu &amp; Cutover</h3>
+          <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed mb-4">
+            Pengawasan User Acceptance Testing (UAT), penjaminan mutu (QA), migrasi data valid, cutover Go-Live, dan garansi pasca rilis (hypercare).
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200 dark:border-white/10 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
+          <span>UAT Standards</span> • <span>Data Cleansing</span> • <span>Go-Live</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION: TENTANG SAYA & NILAI STRATEGIS -->
+    <section id="tentang" class="bento-card p-8 sm:p-10 rounded-3xl">
+      <div class="max-w-xl mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Ringkasan Eksekutif</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight mt-1 font-display">
+          Tentang Saya
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-600 dark:text-zinc-300 leading-relaxed">
+          <p>
+            Project Manager &amp; SAP IT Consultant profesional dengan rekam jejak lebih dari 11 tahun dalam mengawal implementasi sistem berskala enterprise di sektor BUMN dan korporasi swasta.
+          </p>
+          <p>
+            Berpengalaman memimpin tata kelola proyek secara komprehensif: mulai dari penyusunan kerangka kerja, penjadwalan linimasa (WBS), manajemen anggaran &amp; alokasi sumber daya, hingga koordinasi diplomatik dengan pemangku kepentingan tingkat eksekutif (*C-level/VP*), vendor, dan tim teknis.
+          </p>
+          <p>
+            Memiliki keunggulan teknis mendalam dengan latar belakang sebagai *Functional Consultant SAP SuccessFactors* (PMGM &amp; SCDP), konsultan *SAP SD*, serta pengembang sistem piranti lunak (*ABAP &amp; PHP*).
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+          <div class="p-4 rounded-2xl modern-badge">
+            <i data-lucide="shield-check" class="w-5 h-5 text-blue-500 mb-2"></i>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white">Tata Kelola E2E</h4>
+            <p class="text-[11px] text-slate-500 dark:text-zinc-400 mt-1">On-time, on-scope, dan on-budget dengan manajemen risiko.</p>
+          </div>
+          <div class="p-4 rounded-2xl modern-badge">
+            <i data-lucide="users" class="w-5 h-5 text-indigo-500 mb-2"></i>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white">Stakeholder Mgmt</h4>
+            <p class="text-[11px] text-slate-500 dark:text-zinc-400 mt-1">Komunikasi diplomatik dan pelaporan berjenjang.</p>
+          </div>
+          <div class="p-4 rounded-2xl modern-badge">
+            <i data-lucide="layers" class="w-5 h-5 text-sky-500 mb-2"></i>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white">Arsitektur ERP</h4>
+            <p class="text-[11px] text-slate-500 dark:text-zinc-400 mt-1">Sinkronisasi data SAP ERP, SuccessFactors, dan sistem kustom.</p>
+          </div>
+          <div class="p-4 rounded-2xl modern-badge">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 mb-2"></i>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white">Jaminan Mutu</h4>
+            <p class="text-[11px] text-slate-500 dark:text-zinc-400 mt-1">UAT ketat, migrasi data akurat, dan kestabilan Go-Live.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- SECTION: PORTOFOLIO PROYEK -->
-    <section id="portofolio" class="py-20 section-border border-t">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portofolio" class="space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Rekam Jejak 37+ Proyek</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight mt-1 font-display">
+            Portofolio Proyek Utama
+          </h2>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div id="filter-bar" class="flex flex-wrap gap-1.5 p-1 bg-slate-100 dark:bg-white/[0.04] rounded-2xl border border-slate-200 dark:border-white/10 w-fit backdrop-blur-xl">
+          <button type="button" data-filter="all" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-blue-600 text-white shadow-md shadow-blue-500/25 transition-all">
+            Semua
+          </button>
+          <button type="button" data-filter="sap" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-medium text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white transition-all">
+            SAP &amp; SuccessFactors
+          </button>
+          <button type="button" data-filter="pm" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-medium text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white transition-all">
+            Enterprise &amp; PM
+          </button>
+          <button type="button" data-filter="custom" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-medium text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white transition-all">
+            Custom Apps
+          </button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <!-- Project 1 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="pm">
           <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Rekam Jejak 37+ Proyek</span>
-            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1.5 font-display">
-              Portofolio Proyek Utama
-            </h2>
-          </div>
-
-          <!-- Category Filter Buttons -->
-          <div id="filter-bar" class="flex flex-wrap gap-1.5 p-1 bg-slate-100 dark:bg-white/[0.04] rounded-2xl border border-slate-200 dark:border-white/10 w-fit backdrop-blur-xl">
-            <button type="button" data-filter="all" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-blue-600 text-white shadow-md shadow-blue-500/25 transition-all">
-              Semua
-            </button>
-            <button type="button" data-filter="sap" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-medium text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white transition-all">
-              SAP &amp; SuccessFactors
-            </button>
-            <button type="button" data-filter="pm" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-medium text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white transition-all">
-              Enterprise &amp; PM
-            </button>
-            <button type="button" data-filter="custom" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-medium text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white transition-all">
-              Custom Apps
-            </button>
-          </div>
-        </div>
-
-        <!-- Projects Grid -->
-        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- Project 1 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="pm">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2026</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT ABM</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                Insurance Management System
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Mengarahkan pengembangan dan implementasi sistem manajemen asuransi enterprise terpadu untuk efisiensi klaim dan proteksi risiko korporasi.
-              </p>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2026</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT ABM</span>
             </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Project Direction</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Risk Management</span>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="pm">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2024 – 2026</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT ABM</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                PIGEON - GA &amp; Facility Management
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Mengelola Change Request (CR), peningkatan fitur (enhancement), serta tata kelola dukungan operasional sistem manajemen fasilitas.
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Facility Management</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Change Request</span>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="sap pm">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2025 – 2026</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Semen Indonesia (SIG)</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                Elevate - LMS &amp; PMGM
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Memimpin pengembangan platform pembelajaran terpadu (Learning Management System) serta sistem manajemen kinerja pegawai (PMGM).
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">SAP SuccessFactors</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">LMS &amp; PMGM</span>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="sap">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2023 – 2025</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT PP (Persero)</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                SAP SuccessFactors Portfolio
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Optimalisasi modul PMGM, implementasi modul SCDP (Succession &amp; Career Development), serta integrasi Single Sign-On (SSO).
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">PMGM &amp; SCDP</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">SSO Integration</span>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="pm custom">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2025</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Trakindo</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                E-SHE Legal Compliance
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Mengelola penerapan sistem kepatuhan hukum untuk Keselamatan Kerja (K3) dan Lingkungan Hidup sesuai standar regulasi nasional.
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">SHE Compliance</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Audit System</span>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="sap pm">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2024 – 2025</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Dahana</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                SIP &amp; Integrasi ERP SAP
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Memimpin implementasi Sistem Informasi Persediaan (SIP) yang terintegrasi secara langsung dengan modul ERP SAP untuk akurasi inventori.
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">SAP Integration</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Inventory ERP</span>
-            </div>
-          </div>
-
-          <!-- Project 7 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="custom pm">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2023 – 2024</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Semen Indonesia (SIG)</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                Pengembangan Aplikasi SHE Enterprise
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Implementasi aplikasi keselamatan kerja enterprise guna memantau standar operasional dan kepatuhan K3 seluruh unit bisnis holding.
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Safety Application</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Enterprise Rollout</span>
-            </div>
-          </div>
-
-          <!-- Project 8 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="pm">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2020</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Semen Indonesia (SIG)</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                Operational Transformation Project
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Mengawal proyek transformasi operasional perusahaan guna memodernisasi tata kelola dan kelincahan proses bisnis lintas entitas.
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Transformation</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Process Agility</span>
-            </div>
-          </div>
-
-          <!-- Project 9 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="pm custom">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2020</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT PII (Persero)</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                Stakeholder Database &amp; Application
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Pengembangan dan tata kelola basis data pemangku kepentingan terintegrasi untuk penjaminan proyek infrastruktur nasional.
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Database Architecture</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">BUMN Project</span>
-            </div>
-          </div>
-
-          <!-- Project 10 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="sap">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2019</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Waskita Karya (Persero) Tbk</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                QA Implementasi SAP S/4HANA
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Quality Assurance (QA) implementasi sistem ERP SAP S/4HANA, memverifikasi kualitas delivery sistem dan kepatuhan terhadap SOP operasional korporasi.
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">SAP S/4HANA</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Quality Assurance</span>
-            </div>
-          </div>
-
-          <!-- Project 11 -->
-          <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="custom">
-            <div>
-              <div class="flex items-center justify-between text-xs mb-3.5">
-                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20">2015 – 2018</span>
-                <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Semen Padang</span>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 font-display">
-                Internal Enterprise App Suite
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                Rancang bangun rangkaian aplikasi operasional: Shipment Management, Sales &amp; Distribution Online, Warehouse, Monitoring Temuan Audit, dan PKB Online.
-              </p>
-            </div>
-            <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">ABAP &amp; PHP</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200/60 dark:border-white/[0.06]">Logistics Suite</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: PENGALAMAN KERJA -->
-    <section id="pengalaman" class="py-20 section-border border-t">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-xl mb-12">
-          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Perjalanan Karier</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1.5 font-display">
-            Pengalaman Kerja
-          </h2>
-        </div>
-
-        <div class="relative pl-8 sm:pl-10 border-l border-blue-500/30 dark:border-blue-500/30 space-y-12 ml-2 sm:ml-4">
-          
-          <!-- Role 1: Project Manager -->
-          <div class="relative">
-            <span class="timeline-dot-elegant"></span>
-            <div class="glass-card p-6 sm:p-7 rounded-2xl">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display">
-                  Project Manager (Enterprise IT)
-                </h3>
-                <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 w-fit">
-                  2020 – Sekarang
-                </span>
-              </div>
-              <p class="text-xs font-semibold text-slate-500 dark:text-zinc-400 mb-4">Enterprise IT Consulting &amp; Implementation</p>
-              <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-300 leading-relaxed">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
-                  <span>Mengelola siklus hidup proyek TI enterprise secara *end-to-end* guna menjamin pencapaian target *on-time, on-scope, dan on-budget*.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
-                  <span>Memimpin komunikasi intensif antara tim internal, klien BUMN/korporasi, vendor, dan stakeholder tingkat eksekutif.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
-                  <span>Mengawasi pelaksanaan User Acceptance Testing (UAT), cutover Go-Live, mitigasi risiko teknis, serta penjaminan mutu sistem (QA).</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
-                  <span>Menyusun pelaporan berkala manajerial serta dokumentasi teknis proyek secara terstruktur.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Role 2: Functional SAP SF -->
-          <div class="relative">
-            <span class="timeline-dot-elegant"></span>
-            <div class="glass-card p-6 sm:p-7 rounded-2xl">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display">
-                  Functional Consultant / Specialist SAP SuccessFactors
-                </h3>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-white/[0.06] text-slate-600 dark:text-zinc-300 border border-slate-200 dark:border-white/10 w-fit">
-                  2019 – 2026
-                </span>
-              </div>
-              <p class="text-xs font-semibold text-slate-500 dark:text-zinc-400 mb-4">PT Pembangunan Perumahan (Persero) &amp; PT Semen Indonesia (Persero) Tbk</p>
-              <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-300 leading-relaxed">
-                <li class="flex items-start gap-2">
-                  <span class="text-indigo-500 mt-1">•</span>
-                  <span><strong>PT PP (2022–2026):</strong> Blueprint sistem, Report Center, Change Request (CR), enhancement modul PMGM &amp; SCDP, serta dukungan penuh pasca Go-Live.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-indigo-500 mt-1">•</span>
-                  <span><strong>PT SIG (2019–2021):</strong> Migrasi data pegawai, integrasi SAP SuccessFactors dengan SAP ERP korporasi, serta peluncuran (*rollout*) sistem ke anak perusahaan SIG.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Role 3: Functional SAP SD & QA -->
-          <div class="relative">
-            <span class="timeline-dot-elegant"></span>
-            <div class="glass-card p-6 sm:p-7 rounded-2xl">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display">
-                  Functional SAP SD &amp; QA Implementation
-                </h3>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-white/[0.06] text-slate-600 dark:text-zinc-300 border border-slate-200 dark:border-white/10 w-fit">
-                  2015 – 2019
-                </span>
-              </div>
-              <p class="text-xs font-semibold text-slate-500 dark:text-zinc-400 mb-4">PT Waskita Karya (Persero) Tbk &amp; PT Semen Padang</p>
-              <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-300 leading-relaxed">
-                <li class="flex items-start gap-2">
-                  <span class="text-emerald-500 mt-1">•</span>
-                  <span><strong>2019 (PT Waskita Karya):</strong> QA implementasi SAP S/4HANA untuk memverifikasi standar pengiriman sistem dan SOP operasional.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-emerald-500 mt-1">•</span>
-                  <span><strong>2015–2018 (PT Semen Padang):</strong> Functional SAP Modul Sales &amp; Distribution (SD) untuk mendukung rantai operasional penjualan semen nasional.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Role 4: Software Developer -->
-          <div class="relative">
-            <span class="timeline-dot-elegant"></span>
-            <div class="glass-card p-6 sm:p-7 rounded-2xl">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display">
-                  Software Developer (ABAP &amp; PHP) / System Analyst
-                </h3>
-                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-white/[0.06] text-slate-600 dark:text-zinc-300 border border-slate-200 dark:border-white/10 w-fit">
-                  2015 – 2018
-                </span>
-              </div>
-              <p class="text-xs font-semibold text-slate-500 dark:text-zinc-400 mb-3">PT Semen Padang</p>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 leading-relaxed">
-                Mengembangkan rangkaian aplikasi operasional: Shipment Management, Sales &amp; Distribution Online, Warehouse, Monitoring Temuan Audit, PKB Online, dan Transportasi Online.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: PENDIDIKAN -->
-    <section id="pendidikan" class="py-20 section-border border-t">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-xl mb-12">
-          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Kualifikasi Akademik</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1.5 font-display">
-            Pendidikan
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-          
-          <div class="glass-card p-7 rounded-2xl">
-            <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20">2024 – 2026</span>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-3 font-display">
-              Magister Teknik Informatika (M.Kom)
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              Insurance Management System
             </h3>
-            <p class="text-xs font-medium text-slate-500 dark:text-zinc-400 mt-1">Universitas Putra Indonesia ‘YPTK’</p>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 mt-3 leading-relaxed">
-              Spesialisasi rekayasa perangkat lunak lanjutan, manajemen strategis sistem informasi, dan arsitektur enterprise.
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Mengarahkan pengembangan dan implementasi sistem manajemen asuransi enterprise terpadu untuk efisiensi klaim dan proteksi risiko korporasi.
             </p>
           </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Project Direction</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Risk Management</span>
+          </div>
+        </div>
 
-          <div class="glass-card p-7 rounded-2xl">
-            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-white/[0.06] text-slate-600 dark:text-zinc-300 border border-slate-200 dark:border-white/10">2011 – 2015</span>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-3 font-display">
-              Sistem Informasi (S.Kom)
+        <!-- Project 2 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="pm">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2024 – 2026</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT ABM</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              PIGEON - GA &amp; Facility Management
             </h3>
-            <p class="text-xs font-medium text-slate-500 dark:text-zinc-400 mt-1">STMIK Indonesia Padang</p>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 mt-3 leading-relaxed">
-              Analisis dan perancangan sistem informasi bisnis, rekayasa basis data relasional, dan algoritma pemrograman.
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Mengelola Change Request (CR), peningkatan fitur (enhancement), serta tata kelola dukungan operasional sistem manajemen fasilitas.
             </p>
           </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Facility Management</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Change Request</span>
+          </div>
+        </div>
 
+        <!-- Project 3 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="sap pm">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2025 – 2026</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Semen Indonesia (SIG)</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              Elevate - LMS &amp; PMGM
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Memimpin pengembangan platform pembelajaran terpadu (Learning Management System) serta sistem manajemen kinerja pegawai (PMGM).
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">SAP SuccessFactors</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">LMS &amp; PMGM</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="sap">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2023 – 2025</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT PP (Persero)</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              SAP SuccessFactors Portfolio
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Optimalisasi modul PMGM, implementasi modul SCDP (Succession &amp; Career Development), serta integrasi Single Sign-On (SSO).
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">PMGM &amp; SCDP</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">SSO Integration</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="pm custom">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2025</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Trakindo</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              E-SHE Legal Compliance
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Mengelola penerapan sistem kepatuhan hukum untuk Keselamatan Kerja (K3) dan Lingkungan Hidup sesuai standar regulasi nasional.
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">SHE Compliance</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Audit System</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="sap pm">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2024 – 2025</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Dahana</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              SIP &amp; Integrasi ERP SAP
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Memimpin implementasi Sistem Informasi Persediaan (SIP) yang terintegrasi secara langsung dengan modul ERP SAP untuk akurasi inventori.
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">SAP Integration</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Inventory ERP</span>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="custom pm">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2023 – 2024</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Semen Indonesia (SIG)</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              Pengembangan Aplikasi SHE Enterprise
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Implementasi aplikasi keselamatan kerja enterprise guna memantau standar operasional dan kepatuhan K3 seluruh unit bisnis holding.
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Safety Application</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Enterprise Rollout</span>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="pm">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2020</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Semen Indonesia (SIG)</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              Operational Transformation Project
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Mengawal proyek transformasi operasional perusahaan guna memodernisasi tata kelola dan kelincahan proses bisnis lintas entitas.
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Transformation</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Process Agility</span>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="pm custom">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2020</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT PII (Persero)</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              Stakeholder Database &amp; Application
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Pengembangan dan tata kelola basis data pemangku kepentingan terintegrasi untuk penjaminan proyek infrastruktur nasional.
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Database Architecture</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">BUMN Project</span>
+          </div>
+        </div>
+
+        <!-- Project 10 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="sap">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2019</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Waskita Karya (Persero) Tbk</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              QA Implementasi SAP S/4HANA
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Quality Assurance (QA) implementasi sistem ERP SAP S/4HANA, memverifikasi kualitas delivery sistem dan kepatuhan terhadap SOP operasional korporasi.
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">SAP S/4HANA</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Quality Assurance</span>
+          </div>
+        </div>
+
+        <!-- Project 11 -->
+        <div class="project-card bento-card p-6 rounded-3xl flex flex-col justify-between" data-category="custom">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3.5">
+              <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 font-bold border border-blue-200 dark:border-blue-500/20 font-mono">2015 – 2018</span>
+              <span class="font-semibold text-slate-700 dark:text-zinc-300">PT Semen Padang</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 font-display">
+              Internal Enterprise App Suite
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+              Rancang bangun rangkaian aplikasi operasional: Shipment Management, Sales &amp; Distribution Online, Warehouse, Monitoring Temuan Audit, dan PKB Online.
+            </p>
+          </div>
+          <div class="mt-5 pt-3.5 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-500 dark:text-zinc-400">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">ABAP &amp; PHP</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04]">Logistics Suite</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION: PENGALAMAN KERJA & PERJALANAN KARIER -->
+    <section id="pengalaman" class="space-y-6">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Alur Rekam Jejak</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight mt-1 font-display">
+          Pengalaman Kerja
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <!-- Role 1 -->
+        <div class="bento-card p-6 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-2">
+              <span class="text-blue-600 dark:text-blue-400 font-bold font-mono">2020 – Sekarang</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold text-[11px]">Posisi Terkini</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display">
+              Project Manager (Enterprise IT)
+            </h3>
+            <p class="text-xs font-semibold text-slate-500 dark:text-zinc-400 mb-4">Enterprise Multi-Client IT Consulting</p>
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500 mt-1">•</span>
+                <span>Mengelola siklus hidup proyek TI enterprise secara *end-to-end* guna menjamin target *on-time, on-scope, dan on-budget*.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500 mt-1">•</span>
+                <span>Memimpin komunikasi intensif antara tim internal, klien BUMN/korporasi, vendor, dan stakeholder tingkat eksekutif.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500 mt-1">•</span>
+                <span>Mengawasi pelaksanaan User Acceptance Testing (UAT), cutover Go-Live, mitigasi risiko teknis, serta QA sistem.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="bento-card p-6 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-2">
+              <span class="text-indigo-600 dark:text-indigo-400 font-bold font-mono">2019 – 2026</span>
+              <span class="text-slate-500 dark:text-zinc-400 font-medium text-[11px]">7 Tahun Praktik</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display">
+              Functional Consultant SAP SuccessFactors
+            </h3>
+            <p class="text-xs font-semibold text-slate-500 dark:text-zinc-400 mb-4">PT PP (Persero) &amp; PT Semen Indonesia (Persero) Tbk</p>
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-indigo-500 mt-1">•</span>
+                <span><strong>PT PP (2022–2026):</strong> Blueprint sistem, Report Center, Change Request (CR), enhancement modul PMGM &amp; SCDP, serta dukungan penuh pasca Go-Live.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-indigo-500 mt-1">•</span>
+                <span><strong>PT SIG (2019–2021):</strong> Migrasi data pegawai, integrasi SAP SuccessFactors dengan SAP ERP korporasi, serta rollout sistem.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="bento-card p-6 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-2">
+              <span class="text-emerald-600 dark:text-emerald-400 font-bold font-mono">2015 – 2019</span>
+              <span class="text-slate-500 dark:text-zinc-400 font-medium text-[11px]">Implementasi &amp; QA</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display">
+              Functional SAP SD &amp; QA Implementation
+            </h3>
+            <p class="text-xs font-semibold text-slate-500 dark:text-zinc-400 mb-4">PT Waskita Karya (Persero) Tbk &amp; PT Semen Padang</p>
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">•</span>
+                <span><strong>2019 (PT Waskita Karya):</strong> QA implementasi SAP S/4HANA untuk memverifikasi standar pengiriman sistem dan SOP operasional.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">•</span>
+                <span><strong>2015–2018 (PT Semen Padang):</strong> Functional SAP Modul Sales &amp; Distribution (SD) untuk rantai penjualan semen nasional.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="bento-card p-6 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-2">
+              <span class="text-sky-600 dark:text-sky-400 font-bold font-mono">2015 – 2018</span>
+              <span class="text-slate-500 dark:text-zinc-400 font-medium text-[11px]">Software Engineering</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white font-display">
+              Software Developer / System Analyst
+            </h3>
+            <p class="text-xs font-semibold text-slate-500 dark:text-zinc-400 mb-4">PT Semen Padang (ABAP &amp; PHP)</p>
+            <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+              Rancang bangun rangkaian aplikasi operasional korporasi: Shipment Management, Sales &amp; Distribution Online, Warehouse, Monitoring Temuan Audit, PKB Online, dan Transportasi Online.
+            </p>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION: KONTAK -->
-    <section id="kontak" class="py-24 section-border border-t">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="glass-card p-8 sm:p-12 rounded-3xl max-w-4xl mx-auto border border-blue-500/20 shadow-2xl">
-          
-          <div class="text-center max-w-xl mx-auto">
-            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Kontak Profesional</span>
-            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1.5 font-display">
-              Mari Terhubung &amp; Berkolaborasi
-            </h2>
-            <p class="text-sm text-slate-600 dark:text-zinc-300 mt-3 leading-relaxed">
-              Terbuka untuk peluang konsultansi proyek TI enterprise, implementasi SAP SuccessFactors, penjaminan mutu QA/UAT, serta peran Project Management strategis.
-            </p>
-          </div>
+    <!-- SECTION: PENDIDIKAN & KUALIFIKASI -->
+    <section id="pendidikan" class="space-y-6">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Kualifikasi Akademik</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight mt-1 font-display">
+          Pendidikan
+        </h2>
+      </div>
 
-          <!-- Contact Options Grid -->
-          <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
-            <a href="https://wa.me/6285263416474?text=Halo%20Fachrul%20Ilmawan,%20saya%20tertarik%20untuk%20berdiskusi" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-white/60 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 hover:border-emerald-500/60 hover:-translate-y-0.5 transition-all text-center flex flex-col items-center">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-3">
-                <i data-lucide="message-square" class="w-5 h-5"></i>
-              </div>
-              <span class="text-xs text-slate-400 dark:text-zinc-400 font-medium">WhatsApp</span>
-              <span class="text-sm font-bold text-slate-900 dark:text-white mt-1">085263416474</span>
-            </a>
-
-            <a href="mailto:fachrul.ilmawan@gmail.com" class="p-5 rounded-2xl bg-white/60 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 hover:border-blue-500/60 hover:-translate-y-0.5 transition-all text-center flex flex-col items-center">
-              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center mb-3">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </div>
-              <span class="text-xs text-slate-400 dark:text-zinc-400 font-medium">Email Pribadi</span>
-              <span class="text-sm font-bold text-slate-900 dark:text-white mt-1 truncate max-w-full">fachrul.ilmawan@gmail.com</span>
-            </a>
-
-            <div class="p-5 rounded-2xl bg-white/60 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-center flex flex-col items-center">
-              <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center mb-3">
-                <i data-lucide="map-pin" class="w-5 h-5"></i>
-              </div>
-              <span class="text-xs text-slate-400 dark:text-zinc-400 font-medium">Lokasi</span>
-              <span class="text-sm font-bold text-slate-900 dark:text-white mt-1">Jakarta, Indonesia</span>
-            </div>
-
-          </div>
-
-          <!-- Utilities Button -->
-          <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <button id="btn-copy-email" type="button" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-700 dark:text-zinc-200 hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all">
-              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-              <span>Salin Alamat Email</span>
-            </button>
-            <button type="button" onclick="window.print()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-lg shadow-blue-500/25 transition-all">
-              <i data-lucide="printer" class="w-3.5 h-3.5"></i>
-              <span>Cetak Ringkasan CV</span>
-            </button>
-          </div>
-
-          <!-- Official Declaration Statement -->
-          <div class="mt-10 pt-6 border-t border-slate-200 dark:border-white/10 text-center text-xs text-slate-500 dark:text-zinc-400">
-            <p class="italic">"I declare the details stated to be true and complete."</p>
-            <p class="font-bold text-slate-800 dark:text-zinc-200 mt-1 font-display">Fachrul Ilmawan, S.Kom., M.Kom.</p>
-          </div>
-
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="bento-card p-6 sm:p-8 rounded-3xl">
+          <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 font-mono">2024 – 2026</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-3 font-display">
+            Magister Teknik Informatika (M.Kom)
+          </h3>
+          <p class="text-xs font-medium text-slate-500 dark:text-zinc-400 mt-1">Universitas Putra Indonesia ‘YPTK’</p>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 mt-3 leading-relaxed">
+            Spesialisasi rekayasa perangkat lunak lanjutan, manajemen strategis sistem informasi, dan arsitektur enterprise.
+          </p>
         </div>
 
+        <div class="bento-card p-6 sm:p-8 rounded-3xl">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-white/[0.06] text-slate-600 dark:text-zinc-300 border border-slate-200 dark:border-white/10 font-mono">2011 – 2015</span>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-3 font-display">
+            Sistem Informasi (S.Kom)
+          </h3>
+          <p class="text-xs font-medium text-slate-500 dark:text-zinc-400 mt-1">STMIK Indonesia Padang</p>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 mt-3 leading-relaxed">
+            Analisis dan perancangan sistem informasi bisnis, rekayasa basis data relasional, dan algoritma pemrograman.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: KONTAK & HUBUNGI -->
+    <section id="kontak" class="bento-card p-8 sm:p-12 rounded-3xl border border-blue-500/20 shadow-2xl">
+      <div class="text-center max-w-xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-display">Mulai Kolaborasi</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight mt-1 font-display">
+          Mari Terhubung &amp; Berdiskusi
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-zinc-300 mt-3 leading-relaxed">
+          Terbuka untuk peluang konsultansi proyek TI enterprise, implementasi SAP SuccessFactors, penjaminan mutu QA/UAT, serta peran Project Management strategis.
+        </p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="https://wa.me/6285263416474?text=Halo%20Fachrul%20Ilmawan,%20saya%20tertarik%20untuk%20berdiskusi" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-white/60 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 hover:border-emerald-500/60 hover:-translate-y-0.5 transition-all text-center flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-3">
+            <i data-lucide="message-square" class="w-5 h-5"></i>
+          </div>
+          <span class="text-xs text-slate-400 dark:text-zinc-400 font-medium">WhatsApp</span>
+          <span class="text-sm font-bold text-slate-900 dark:text-white mt-1">085263416474</span>
+        </a>
+
+        <a href="mailto:fachrul.ilmawan@gmail.com" class="p-5 rounded-2xl bg-white/60 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 hover:border-blue-500/60 hover:-translate-y-0.5 transition-all text-center flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center mb-3">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </div>
+          <span class="text-xs text-slate-400 dark:text-zinc-400 font-medium">Email Pribadi</span>
+          <span class="text-sm font-bold text-slate-900 dark:text-white mt-1 truncate max-w-full">fachrul.ilmawan@gmail.com</span>
+        </a>
+
+        <div class="p-5 rounded-2xl bg-white/60 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-center flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center mb-3">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </div>
+          <span class="text-xs text-slate-400 dark:text-zinc-400 font-medium">Lokasi</span>
+          <span class="text-sm font-bold text-slate-900 dark:text-white mt-1">Jakarta, Indonesia</span>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <button id="btn-copy-email" type="button" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-700 dark:text-zinc-200 hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span>Salin Alamat Email</span>
+        </button>
+        <button type="button" onclick="window.print()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-lg shadow-blue-500/25 transition-all">
+          <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+          <span>Cetak Ringkasan CV</span>
+        </button>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-slate-200 dark:border-white/10 text-center text-xs text-slate-500 dark:text-zinc-400">
+        <p class="italic">"I declare the details stated to be true and complete."</p>
+        <p class="font-bold text-slate-800 dark:text-zinc-200 mt-1 font-display">Fachrul Ilmawan, S.Kom., M.Kom.</p>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="py-8 section-border border-t text-center text-xs text-slate-500 dark:text-zinc-400">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+  <footer class="max-w-5xl mx-auto px-4 sm:px-6 pt-10 text-center text-xs text-slate-500 dark:text-zinc-400">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 border-t border-slate-200 dark:border-white/10">
       <div class="flex items-center gap-2">
         <div class="w-6 h-6 rounded-md bg-blue-600 text-white text-xs font-bold flex items-center justify-center">FI</div>
         <span>&copy; 2026 Fachrul Ilmawan. Seluruh hak cipta dilindungi.</span>
