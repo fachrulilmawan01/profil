@@ -1,18 +1,30 @@
 {
-  "name": "fachrul-ilmawan-profile",
-  "version": "1.0.0",
-  "description": "Personal Web Profile & Portfolio of Fachrul Ilmawan - Project Manager & SAP SuccessFactors Consultant",
+  "name": "fachrul-ilmawan-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Executive Personal Portfolio of Fachrul Ilmawan - Project Manager & SAP SuccessFactors Consultant",
   "scripts": {
-    "dev": "npx serve . -p 3000",
-    "start": "npx serve . -p 3000"
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [
-    "portfolio",
-    "project-manager",
-    "sap",
-    "successfactors",
-    "profile"
-  ],
-  "author": "Fachrul Ilmawan",
-  "license": "MIT"
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.14.0",
+    "lucide-react": "^1.73.0",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2"
+  }
 }
