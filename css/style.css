@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {
@@ -10,97 +10,99 @@ html {
   font-family: var(--font-sans);
 }
 
-/* IT Professional Background Pattern */
-.bg-tech-pattern {
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Ambient Lighting & Luxury Glow Backgrounds */
+.bg-ambient-light {
+  background-color: #fafbfc;
   background-image: 
-    radial-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-    radial-gradient(rgba(37, 99, 235, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  background-position: 0 0, 12px 12px;
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.04) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(14, 165, 233, 0.03) 0px, transparent 60%);
 }
 
-.dark .bg-tech-pattern {
+.dark .bg-ambient-dark {
+  background-color: #090c15;
   background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px);
-  background-size: 28px 28px;
-  background-position: 0 0, 14px 14px;
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 10%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+    radial-gradient(at 50% 60%, rgba(14, 165, 233, 0.06) 0px, transparent 60%);
 }
 
-/* IT Card Styling */
-.card-tech {
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(228, 228, 231, 0.9);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
+/* Elegant Glass Panels */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dark .card-tech {
-  background-color: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(30, 41, 59, 0.9);
+.dark .glass-card {
+  background: rgba(15, 22, 38, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(30, 41, 65, 0.8);
 }
 
-.card-tech:hover {
-  border-color: rgba(59, 130, 246, 0.6);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08);
+.glass-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.08);
 }
 
-.dark .card-tech:hover {
-  border-color: rgba(96, 165, 250, 0.5);
-  box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.12);
+.dark .glass-card:hover {
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
 }
 
-/* Header Glass with IT Edge */
+/* Header Glass */
 .header-glass {
-  background-color: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(228, 228, 231, 0.8);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .dark .header-glass {
-  background-color: rgba(11, 15, 25, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+  background: rgba(9, 12, 21, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(30, 41, 65, 0.7);
 }
 
-/* Terminal Console Box */
-.terminal-box {
-  background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 12px;
-  font-family: var(--font-mono);
-}
-
-.dark .terminal-box {
-  background: #090d16;
-  border: 1px solid #1e293b;
-}
-
-/* Timeline Custom Node */
-.timeline-dot {
+/* Timeline Elegant */
+.timeline-dot-elegant {
   position: absolute;
-  left: -25px;
+  left: -29px;
   top: 7px;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
+  background-color: #2563eb;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.dark .timeline-dot-elegant {
   background-color: #3b82f6;
-  box-shadow: 0 0 0 4px #eff6ff;
+  border-color: #090c15;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
-.dark .timeline-dot {
-  background-color: #60a5fa;
-  box-shadow: 0 0 0 4px #0f172a;
+/* Subtle Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Code Pill */
-.code-tag {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: -0.01em;
+.dark .gradient-text {
+  background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Custom Scrollbar */
@@ -134,7 +136,7 @@ html {
   header, #btn-print, #theme-toggle, .no-print, footer, #quick-actions, #filter-bar {
     display: none !important;
   }
-  .card-tech {
+  .glass-card {
     border: 1px solid #e2e8f0 !important;
     background: #ffffff !important;
     box-shadow: none !important;
