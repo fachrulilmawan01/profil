@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -10,43 +10,76 @@ html {
   font-family: var(--font-sans);
 }
 
-/* Subtle border transitions and clean background */
-.card-simple {
-  background-color: rgba(255, 255, 255, 0.8);
+/* IT Professional Background Pattern */
+.bg-tech-pattern {
+  background-image: 
+    radial-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.dark .bg-tech-pattern {
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* IT Card Styling */
+.card-tech {
+  background-color: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(228, 228, 231, 0.9);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
-.dark .card-simple {
-  background-color: rgba(24, 24, 27, 0.65);
-  border: 1px solid rgba(39, 39, 42, 0.8);
+.dark .card-tech {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(30, 41, 59, 0.9);
 }
 
-.card-simple:hover {
-  border-color: rgba(59, 130, 246, 0.5);
+.card-tech:hover {
+  border-color: rgba(59, 130, 246, 0.6);
   transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08);
 }
 
-.dark .card-simple:hover {
-  border-color: rgba(96, 165, 250, 0.4);
+.dark .card-tech:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.12);
 }
 
-/* Minimalist Glass Nav */
+/* Header Glass with IT Edge */
 .header-glass {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(228, 228, 231, 0.8);
 }
 
 .dark .header-glass {
-  background-color: rgba(9, 9, 11, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(39, 39, 42, 0.8);
+  background-color: rgba(11, 15, 25, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(30, 41, 59, 0.8);
 }
 
-/* Timeline Minimal */
+/* Terminal Console Box */
+.terminal-box {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  font-family: var(--font-mono);
+}
+
+.dark .terminal-box {
+  background: #090d16;
+  border: 1px solid #1e293b;
+}
+
+/* Timeline Custom Node */
 .timeline-dot {
   position: absolute;
   left: -25px;
@@ -54,13 +87,20 @@ html {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #2563eb;
+  background-color: #3b82f6;
   box-shadow: 0 0 0 4px #eff6ff;
 }
 
 .dark .timeline-dot {
-  background-color: #3b82f6;
-  box-shadow: 0 0 0 4px #18181b;
+  background-color: #60a5fa;
+  box-shadow: 0 0 0 4px #0f172a;
+}
+
+/* Code Pill */
+.code-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: -0.01em;
 }
 
 /* Custom Scrollbar */
@@ -71,17 +111,17 @@ html {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 .dark ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #334155;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
+  background: #94a3b8;
 }
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #475569;
 }
 
 /* Print Optimization */
@@ -94,8 +134,8 @@ html {
   header, #btn-print, #theme-toggle, .no-print, footer, #quick-actions, #filter-bar {
     display: none !important;
   }
-  .card-simple {
-    border: 1px solid #e4e4e7 !important;
+  .card-tech {
+    border: 1px solid #e2e8f0 !important;
     background: #ffffff !important;
     box-shadow: none !important;
     transform: none !important;

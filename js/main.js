@@ -1,4 +1,4 @@
-// Fachrul Ilmawan - Minimalist & Modern Web Profile Application Logic
+// Fachrul Ilmawan - Enterprise IT Professional Portfolio Application Logic
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -39,19 +39,19 @@ function initTheme() {
   if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
 }
 
-// Minimalist category filter
+// Project category filter logic
 function initProjectFilter() {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
-  const activeClasses = ['bg-zinc-900', 'dark:bg-white', 'text-white', 'dark:text-zinc-900', 'font-semibold'];
-  const inactiveClasses = ['text-zinc-600', 'dark:text-zinc-400', 'font-medium'];
+  const activeClasses = ['bg-blue-600', 'text-white', 'shadow-sm', 'font-semibold'];
+  const inactiveClasses = ['text-slate-600', 'dark:text-slate-400', 'hover:text-slate-900', 'dark:hover:text-white', 'font-medium'];
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const category = btn.getAttribute('data-filter');
 
-      // Update button styling
+      // Update button styles
       filterButtons.forEach(b => {
         b.classList.remove(...activeClasses);
         b.classList.add(...inactiveClasses);
@@ -60,7 +60,7 @@ function initProjectFilter() {
       btn.classList.add(...activeClasses);
       btn.classList.remove(...inactiveClasses);
 
-      // Filter project cards
+      // Filter cards with smooth opacity transition
       projectCards.forEach(card => {
         const cardCategories = (card.getAttribute('data-category') || '').split(' ');
         if (category === 'all' || cardCategories.includes(category)) {
@@ -81,7 +81,7 @@ function initProjectFilter() {
   });
 }
 
-// Mobile drawer menu
+// Mobile drawer navigation
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobile-menu-btn');
   const closeBtn = document.getElementById('mobile-menu-close');
@@ -104,7 +104,7 @@ function initMobileMenu() {
   });
 }
 
-// Copy email to clipboard
+// Copy email to clipboard with instant toast notification
 function initEmailCopy() {
   const copyBtn = document.getElementById('btn-copy-email');
   const toast = document.getElementById('copy-toast');
@@ -134,11 +134,11 @@ function initEmailCopy() {
     setTimeout(() => {
       toast.classList.remove('opacity-100', 'translate-y-0');
       toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
-    }, 2000);
+    }, 2200);
   }
 }
 
-// Highlight active section on scroll
+// Highlight active section on scroll (ScrollSpy)
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -148,7 +148,7 @@ function initScrollSpy() {
 
     sections.forEach(sec => {
       const sectionHeight = sec.offsetHeight;
-      const sectionTop = sec.offsetTop - 100;
+      const sectionTop = sec.offsetTop - 110;
       const sectionId = sec.getAttribute('id');
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
