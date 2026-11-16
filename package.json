@@ -1,0 +1,18 @@
+{
+  "name": "fachrul-ilmawan-profile",
+  "version": "1.0.0",
+  "description": "Personal Web Profile & Portfolio of Fachrul Ilmawan - Project Manager & SAP SuccessFactors Consultant",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "project-manager",
+    "sap",
+    "successfactors",
+    "profile"
+  ],
+  "author": "Fachrul Ilmawan",
+  "license": "MIT"
+}
