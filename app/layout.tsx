@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
   title: 'Fachrul Ilmawan | Project Manager & SAP SuccessFactors Consultant',
@@ -62,7 +63,9 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-screen executive-bg-light dark:executive-bg-dark">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

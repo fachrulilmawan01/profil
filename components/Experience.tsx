@@ -2,10 +2,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Building2, Calendar, MapPin } from 'lucide-react';
-import { experienceData } from '@/data/experience';
+import { Building2, Calendar } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Experience() {
+  const { t } = useLanguage();
+
   return (
     <section id="experience" className="py-24 border-t border-border dark:border-dark-border relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,20 +15,20 @@ export default function Experience() {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-accent dark:text-blue-400 font-display">
-            CAREER TIMELINE
+            {t.experience.label}
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-primary dark:text-white tracking-tight mt-2 font-display">
-            Professional Journey
+            {t.experience.title}
           </h2>
           <p className="mt-4 text-base sm:text-lg text-secondary dark:text-dark-muted leading-relaxed">
-            A progressive 11+ year track record spanning hands-on software engineering, functional ERP consulting, and enterprise project leadership.
+            {t.experience.subtitle}
           </p>
         </div>
 
         {/* Elegant Timeline Container */}
         <div className="relative pl-6 sm:pl-10 border-l-2 border-border dark:border-dark-border space-y-12 ml-2 sm:ml-4">
           
-          {experienceData.map((item, index) => (
+          {t.experience.items.map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, x: -15 }}

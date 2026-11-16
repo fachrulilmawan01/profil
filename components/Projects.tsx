@@ -2,20 +2,28 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Building2, Calendar, ArrowUpRight, Layers } from 'lucide-react';
-import { projectsData, Project } from '@/data/projects';
+import { Building2, ArrowUpRight } from 'lucide-react';
 import ProjectModal from './ProjectModal';
-
-const categories = ['All Projects', 'SAP & SuccessFactors', 'Enterprise Systems', 'Custom Solutions'];
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState('All Projects');
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const { t } = useLanguage();
+  const [selectedCategory, setSelectedCategory] = useState('ALL');
+  const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
 
-  const filteredProjects = projectsData.filter((p) => {
-    if (selectedCategory === 'All Projects') return true;
+  const categories = [
+    { key: 'ALL', label: t.projects.filterAll },
+    { key: 'SAP & SuccessFactors', label: t.projects.filterSap },
+    { key: 'Enterprise Systems', label: t.projects.filterEnterprise },
+    { key: 'Custom Solutions', label: t.projects.filterCustom },
+  ];
+
+  const filteredProjects = t.projects.items.filter((p) => {
+    if (selectedCategory === 'ALL') return true;
     return p.category === selectedCategory;
   });
+
+  const activeProject = t.projects.items.find((p) => p.id === activeProjectId) || null;
 
   return (
     <section id="projects" className="py-24 border-t border-border dark:border-dark-border relative">
@@ -25,24 +33,24 @@ export default function Projects() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-widest text-accent dark:text-blue-400 font-display">
-              PORTFOLIO SHOWCASE
+              {t.projects.label}
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-primary dark:text-white tracking-tight mt-2 font-display">
-              Selected Enterprise Projects
+              {t.projects.title}
             </h2>
             <p className="mt-4 text-base sm:text-lg text-secondary dark:text-dark-muted leading-relaxed">
-              Curated enterprise systems and digital initiatives delivered for leading BUMN and commercial clients.
+              {t.projects.subtitle}
             </p>
           </div>
 
           {/* Interactive Filter Pills */}
           <div className="flex flex-wrap gap-2 p-1.5 rounded-2xl bg-slate-100 dark:bg-dark-surface border border-border dark:border-dark-border w-fit">
             {categories.map((cat) => {
-              const isActive = selectedCategory === cat;
+              const isActive = selectedCategory === cat.key;
               return (
                 <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
+                  key={cat.key}
+                  onClick={() => setSelectedCategory(cat.key)}
                   type="button"
                   className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
                     isActive
@@ -50,7 +58,7 @@ export default function Projects() {
                       : 'text-secondary dark:text-dark-muted hover:text-primary dark:hover:text-white'
                   }`}
                 >
-                  {cat}
+                  {cat.label}
                 </button>
               );
             })}
@@ -67,7 +75,7 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              onClick={() => setActiveProject(project)}
+              onClick={() => setActiveProjectId(project.id)}
               className="executive-card p-7 rounded-3xl flex flex-col justify-between cursor-pointer group"
             >
               <div>
@@ -122,7 +130,7 @@ export default function Projects() {
         {/* Modal for Project Deep Dive */}
         <ProjectModal
           project={activeProject}
-          onClose={() => setActiveProject(null)}
+          onClose={() => setActiveProjectId(null)}
         />
 
       </div>

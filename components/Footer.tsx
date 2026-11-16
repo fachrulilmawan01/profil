@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { ArrowUp, Mail, MessageSquare } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const LinkedinIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -10,18 +10,19 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Expertise', href: '#expertise' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Education', href: '#education' },
-  { name: 'Contact', href: '#contact' },
-];
-
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
+
+  const navLinks = [
+    { name: t.nav.home, href: '#home' },
+    { name: t.nav.about, href: '#about' },
+    { name: t.nav.experience, href: '#experience' },
+    { name: t.nav.expertise, href: '#expertise' },
+    { name: t.nav.projects, href: '#projects' },
+    { name: t.nav.education, href: '#education' },
+    { name: t.nav.contact, href: '#contact' },
+  ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -44,10 +45,10 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-xs sm:text-sm text-secondary dark:text-dark-muted font-medium">
-              Project Manager | SAP SuccessFactors Consultant
+              {t.footer.role}
             </p>
             <p className="text-xs text-secondary/70 dark:text-dark-muted/70 mt-1">
-              Jakarta, Indonesia • IT Professional since 2015
+              {t.footer.sub}
             </p>
           </div>
 
@@ -83,7 +84,7 @@ export default function Footer() {
               type="button"
               aria-label="Back to top"
               className="w-10 h-10 rounded-xl bg-accent text-white hover:bg-accent-hover flex items-center justify-center transition-colors shadow-sm ml-2"
-              title="Back to Top"
+              title={t.footer.backToTop}
             >
               <ArrowUp className="w-4 h-4" />
             </button>
@@ -106,7 +107,7 @@ export default function Footer() {
           </nav>
 
           <div>
-            &copy; {currentYear} Fachrul Ilmawan, S.Kom., M.Kom. All rights reserved.
+            &copy; {currentYear} Fachrul Ilmawan, S.Kom., M.Kom. {t.footer.rights}
           </div>
         </div>
 

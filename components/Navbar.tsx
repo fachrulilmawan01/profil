@@ -3,31 +3,33 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ArrowUpRight, Printer } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-
-const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Expertise', href: '#expertise' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Education', href: '#education' },
-  { name: 'Contact', href: '#contact' },
-];
+import LanguageToggle from './LanguageToggle';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Navbar() {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+
+  const navLinks = [
+    { name: t.nav.home, href: '#home', id: 'home' },
+    { name: t.nav.about, href: '#about', id: 'about' },
+    { name: t.nav.experience, href: '#experience', id: 'experience' },
+    { name: t.nav.expertise, href: '#expertise', id: 'expertise' },
+    { name: t.nav.projects, href: '#projects', id: 'projects' },
+    { name: t.nav.education, href: '#education', id: 'education' },
+    { name: t.nav.contact, href: '#contact', id: 'contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections = navLinks.map(link => link.href.substring(1));
+      const sectionIds = ['home', 'about', 'experience', 'expertise', 'projects', 'education', 'contact'];
       const scrollPosition = window.scrollY + 120;
 
-      for (const section of sections) {
+      for (const section of sectionIds) {
         const el = document.getElementById(section);
         if (el) {
           const top = el.offsetTop;
@@ -64,12 +66,12 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-secondary dark:text-dark-muted">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-xs font-semibold uppercase tracking-wider text-secondary dark:text-dark-muted">
           {navLinks.map((link) => {
-            const isActive = activeSection === link.href.substring(1);
+            const isActive = activeSection === link.id;
             return (
               <a
-                key={link.name}
+                key={link.id}
                 href={link.href}
                 className={`transition-colors py-1 ${
                   isActive
@@ -83,9 +85,10 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Utilities & Connect Button */}
+        {/* Utilities: Language Selector & Connect Button */}
         <div className="flex items-center gap-3">
-          <ThemeToggle />
+          {/* Language Switcher (Replaces Dark Toggle) */}
+          <LanguageToggle />
 
           <button
             onClick={() => window.print()}
@@ -102,7 +105,7 @@ export default function Navbar() {
             href="#contact"
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-accent hover:bg-accent-hover text-white shadow-md shadow-accent/25 transition-all hover:-translate-y-0.5"
           >
-            <span>Let&apos;s Connect</span>
+            <span>{t.nav.letsConnect}</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
 
@@ -123,15 +126,15 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-x-0 top-20 bg-surface dark:bg-dark-bg border-b border-border dark:border-dark-border shadow-2xl p-6 transition-all">
           <nav className="flex flex-col gap-3">
-            {navLinks.map((link) => (
+            {navLinks.map((link, idx) => (
               <a
-                key={link.name}
+                key={link.id}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2.5 px-4 rounded-xl text-sm font-semibold text-primary dark:text-white hover:bg-slate-100 dark:hover:bg-dark-surfaceHover transition-colors flex items-center justify-between"
               >
                 <span>{link.name}</span>
-                <span className="text-xs text-secondary dark:text-dark-muted font-mono">0{navLinks.indexOf(link) + 1}</span>
+                <span className="text-xs text-secondary dark:text-dark-muted font-mono">0{idx + 1}</span>
               </a>
             ))}
             <div className="pt-4 border-t border-border dark:border-dark-border flex flex-col gap-2.5">
@@ -140,7 +143,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-3 px-4 rounded-xl text-xs font-semibold bg-accent text-white flex items-center justify-center gap-2 shadow-md"
               >
-                <span>Let&apos;s Connect</span>
+                <span>{t.nav.letsConnect}</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>

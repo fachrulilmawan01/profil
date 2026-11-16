@@ -6,22 +6,24 @@ import {
   Briefcase, 
   Server, 
   Layers, 
-  CheckCircle2, 
-  Sparkles, 
+  ClipboardCheck, 
+  TrendingUp, 
   Users2 
 } from 'lucide-react';
-import { expertiseData } from '@/data/expertise';
+import { useLanguage } from '@/context/LanguageContext';
 
 const iconMap: Record<string, React.ElementType> = {
   Briefcase,
   Server,
   Layers,
-  CheckCircle2,
-  Sparkles,
+  ClipboardCheck,
+  TrendingUp,
   Users2,
 };
 
 export default function Expertise() {
+  const { t } = useLanguage();
+
   return (
     <section id="expertise" className="py-24 border-t border-border dark:border-dark-border relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,19 +31,19 @@ export default function Expertise() {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-accent dark:text-blue-400 font-display">
-            CORE COMPETENCIES
+            {t.expertise.label}
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-primary dark:text-white tracking-tight mt-2 font-display">
-            Areas of Expertise
+            {t.expertise.title}
           </h2>
           <p className="mt-4 text-base sm:text-lg text-secondary dark:text-dark-muted leading-relaxed">
-            Six interconnected pillars of technical expertise, enterprise solution architecture, and strategic management.
+            {t.expertise.subtitle}
           </p>
         </div>
 
         {/* Sophisticated Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {expertiseData.map((item, index) => {
+          {t.expertise.items.map((item, index) => {
             const Icon = iconMap[item.iconName] || Briefcase;
             return (
               <motion.div

@@ -11,41 +11,13 @@ import {
   ClipboardCheck, 
   Sparkles 
 } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
-const coreStrengths = [
-  {
-    icon: Briefcase,
-    title: 'End-to-End Project Management',
-    description: 'Guiding complex enterprise IT lifecycles from charter initiation, WBS scheduling, and budget governance to post-launch hypercare.'
-  },
-  {
-    icon: Server,
-    title: 'Enterprise System Implementation',
-    description: 'Seamless integration of SAP S/4HANA, ERP modules, facility management systems, and specialized business applications.'
-  },
-  {
-    icon: Users2,
-    title: 'Stakeholder Management',
-    description: 'Building diplomatic bridges between C-level executives, cross-functional business units, external vendors, and technical developers.'
-  },
-  {
-    icon: Layers,
-    title: 'SAP SuccessFactors',
-    description: 'Comprehensive functional expertise in Performance & Goals (PMGM), Succession (SCDP), Report Center, and Single Sign-On (SSO).'
-  },
-  {
-    icon: ClipboardCheck,
-    title: 'Quality Assurance & UAT',
-    description: 'Directing stringent User Acceptance Testing, master data migration verification, cutover planning, and operational QA compliance.'
-  },
-  {
-    icon: Sparkles,
-    title: 'Digital Transformation',
-    description: 'Modernizing legacy processes and accelerating corporate business agility across leading BUMN holdings and private corporations.'
-  }
-];
+const icons = [Briefcase, Server, Users2, Layers, ClipboardCheck, Sparkles];
 
 export default function About() {
+  const { t, lang } = useLanguage();
+
   return (
     <section id="about" className="py-24 border-t border-border dark:border-dark-border relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,13 +25,13 @@ export default function About() {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-accent dark:text-blue-400 font-display">
-            ABOUT ME
+            {t.about.label}
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-primary dark:text-white tracking-tight mt-2 font-display">
-            Beyond Technology, Driven by Impact.
+            {t.about.title}
           </h2>
           <p className="mt-4 text-base sm:text-lg text-secondary dark:text-dark-muted leading-relaxed">
-            Project Manager and SAP IT Consultant with extensive experience in enterprise technology implementation, dedicated to aligning technical architecture with tangible corporate outcomes.
+            {t.about.p1}
           </p>
         </div>
 
@@ -76,36 +48,35 @@ export default function About() {
           >
             <div className="p-6 rounded-3xl bg-surface dark:bg-dark-surface border border-border dark:border-dark-border shadow-sm">
               <h3 className="text-lg font-bold text-primary dark:text-white font-display mb-3">
-                Executive Positioning
+                {lang === 'id' ? 'Posisi Eksekutif' : 'Executive Positioning'}
               </h3>
               <p className="text-sm sm:text-base italic text-primary dark:text-zinc-200 border-l-2 border-accent pl-4 my-2">
-                &ldquo;Turning Complex Technology into Meaningful Business Impact.&rdquo;
+                &ldquo;{lang === 'id' ? 'Mengubah Kompleksitas Teknologi Menjadi Dampak Bisnis Nyata.' : 'Turning Complex Technology into Meaningful Business Impact.'}&rdquo;
               </p>
               <p className="text-xs sm:text-sm text-secondary dark:text-dark-muted mt-3">
-                Over 11 years in the IT landscape (since 2015) and leading projects since 2020, with over 37 enterprise initiatives successfully delivered across Indonesia.
+                {lang === 'id' 
+                  ? 'Lebih dari 11 tahun di industri IT (sejak 2015) dan memimpin proyek sejak 2020, dengan 37+ inisiatif enterprise sukses diselesaikan di Indonesia.'
+                  : 'Over 11 years in the IT landscape (since 2015) and leading projects since 2020, with over 37 enterprise initiatives successfully delivered across Indonesia.'
+                }
               </p>
             </div>
 
             <p>
-              Experienced in managing complete project lifecycles, coordinating internal teams, clients, vendors, and executive stakeholders.
-            </p>
-
-            <p>
-              My professional ethos centers on precision governance: ensuring enterprise projects are delivered on-scope, on-time, and within budget, while creating frictionless digital experiences for end users.
+              {t.about.p2}
             </p>
 
             <div className="pt-4 border-t border-border dark:border-dark-border">
               <h4 className="text-xs font-bold uppercase tracking-wider text-primary dark:text-white mb-3">
-                Academic &amp; Professional Credentials
+                {lang === 'id' ? 'Kredensial Akademik & Profesional' : 'Academic & Professional Credentials'}
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-secondary dark:text-dark-muted">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
-                  <span><strong>M.Kom</strong> – Master of Informatics Engineering (UPI &apos;YPTK&apos;)</span>
+                  <span><strong>M.Kom</strong> – {lang === 'id' ? 'Magister Teknik Informatika' : 'Master of Informatics Engineering'} (UPI &apos;YPTK&apos;)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
-                  <span><strong>S.Kom</strong> – Bachelor of Information Systems (STMIK Indonesia)</span>
+                  <span><strong>S.Kom</strong> – {lang === 'id' ? 'Sarjana Sistem Informasi' : 'Bachelor of Information Systems'} (STMIK Indonesia)</span>
                 </li>
               </ul>
             </div>
@@ -113,8 +84,8 @@ export default function About() {
 
           {/* Right Core Strengths Grid */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {coreStrengths.map((strength, index) => {
-              const Icon = strength.icon;
+            {t.about.strengths.map((strength, index) => {
+              const Icon = icons[index % icons.length];
               return (
                 <motion.div
                   key={strength.title}
