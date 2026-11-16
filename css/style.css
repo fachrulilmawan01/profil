@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -10,70 +10,86 @@ html {
   font-family: var(--font-sans);
 }
 
-h1, h2, h3, .font-display {
+h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
 }
 
-/* Ambient Lighting & Luxury Glow Backgrounds */
+/* Light Theme Background */
 .bg-ambient-light {
   background-color: #fafbfc;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.04) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(14, 165, 233, 0.03) 0px, transparent 60%);
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.04) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.03) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(14, 165, 233, 0.02) 0px, transparent 60%);
 }
 
+/* Luxury Dark Theme Background - Rich Deep Obsidian with Ethereal Glow */
 .dark .bg-ambient-dark {
-  background-color: #090c15;
+  background-color: #08090d;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 10%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
-    radial-gradient(at 50% 60%, rgba(14, 165, 233, 0.06) 0px, transparent 60%);
+    radial-gradient(850px circle at 50% -80px, rgba(37, 99, 235, 0.16), transparent 75%),
+    radial-gradient(650px circle at 90% 25%, rgba(99, 102, 241, 0.08), transparent 70%),
+    radial-gradient(600px circle at 10% 70%, rgba(14, 165, 233, 0.06), transparent 65%);
 }
 
-/* Elegant Glass Panels */
+/* Light Glass Panel */
 .glass-card {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(226, 232, 240, 0.9);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.dark .glass-card {
-  background: rgba(15, 22, 38, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(30, 41, 65, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px -6px rgba(15, 23, 42, 0.08);
+}
+
+/* Dark Glass Panel - Crisp & High Contrast with Subtle Inset Highlights */
+.dark .glass-card {
+  background: rgba(15, 17, 26, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
 }
 
 .dark .glass-card:hover {
-  border-color: rgba(96, 165, 250, 0.35);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+  background: rgba(20, 24, 38, 0.85);
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.65), 0 0 24px -4px rgba(59, 130, 246, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
-/* Header Glass */
+/* Light Header */
 .header-glass {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
+/* Dark Header */
 .dark .header-glass {
-  background: rgba(9, 12, 21, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(30, 41, 65, 0.7);
+  background: rgba(8, 9, 13, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-/* Timeline Elegant */
+/* Section Dividers */
+.section-border {
+  border-color: rgba(226, 232, 240, 0.8);
+}
+
+.dark .section-border {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Timeline Custom Node */
 .timeline-dot-elegant {
   position: absolute;
   left: -29px;
@@ -87,25 +103,19 @@ h1, h2, h3, .font-display {
 }
 
 .dark .timeline-dot-elegant {
-  background-color: #3b82f6;
-  border-color: #090c15;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  background-color: #60a5fa;
+  border-color: #08090d;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25), 0 0 12px 2px rgba(59, 130, 246, 0.4);
 }
 
-/* Subtle Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+/* Subtle Gradient Text for Dark Mode */
+.gradient-heading-dark {
+  background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.dark .gradient-text {
-  background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Custom Scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -117,13 +127,13 @@ h1, h2, h3, .font-display {
   border-radius: 9999px;
 }
 .dark ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #27272a;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #3f3f46;
 }
 
 /* Print Optimization */
